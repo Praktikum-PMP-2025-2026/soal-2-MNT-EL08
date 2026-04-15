@@ -9,29 +9,30 @@
 
 #include <stdio.h>
 
-int jump(int n, int count){
+int jump(int n){
+    int count = 0;
     while(n != 1){
+        
         if(n%2 == 0){
             n = n/2;
-            return count +1;
         }
         else{
             n = 3*n+1;
-            return count +1;
         }
+    count++;
+    } return count;
 }
-
 int main(){
     int T;
     int N;
     printf("Masukkan nilai: ");
-    scanf("%d", T);
+    scanf("%d", &T);
 
     for(int i = 0; i<T; i++){
         scanf("%d", &N);
+        int result = jump(N);
+        printf("LANGKAH %d\n", result);
     }
-    int result = jump(N, 0);
 
     return 0;
-
 }
