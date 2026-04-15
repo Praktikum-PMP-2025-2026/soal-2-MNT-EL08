@@ -25,7 +25,6 @@ int jump(int n){
 int main(){
     int T;
     int N;
-    printf("Masukkan nilai: ");
     scanf("%d", &T);
 
     for(int i = 0; i<T; i++){
